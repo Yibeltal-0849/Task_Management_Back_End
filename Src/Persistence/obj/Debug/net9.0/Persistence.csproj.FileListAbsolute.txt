@@ -1,0 +1,16 @@
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Persistence.deps.json
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Persistence.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Persistence.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Domain.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Domain.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.csproj.AssemblyReference.cache
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.AssemblyInfoInputs.cache
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.AssemblyInfo.cs
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.csproj.CoreCompileInputs.cache
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.sourcelink.json
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persiste.61C28332.Up2Date
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\refint\Persistence.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\ref\Persistence.dll

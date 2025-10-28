@@ -1,0 +1,12 @@
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\bin\Debug\net9.0\Domain.deps.json
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\bin\Debug\net9.0\Domain.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\bin\Debug\net9.0\Domain.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\Domain.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\refint\Domain.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\Domain.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Domain\obj\Debug\net9.0\ref\Domain.dll
