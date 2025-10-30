@@ -5,9 +5,11 @@ namespace Task_Management.Domain.Entities
         public int TaskID { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+        public int CreatedBy { get; set; }
+        public int? AssignedTo { get; set; }  
         public string Status { get; set; } = "Pending";
-        public DateTime CreatedAt { get; set; }
-        public int UserID { get; set; }
-        public string UserName { get; set; } = string.Empty; // joined from Users
+        public DateTime CreatedDate { get; set; }
+        public DateTime? DueDate { get; set; }
+
     }
 }

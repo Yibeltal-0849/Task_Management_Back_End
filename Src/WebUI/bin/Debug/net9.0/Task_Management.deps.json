@@ -9,6 +9,7 @@
       "Task_Management/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.5",
           "Microsoft.Data.SqlClient": "6.1.2",
           "Persistence": "1.0.0",
@@ -497,9 +498,21 @@
           }
         }
       },
+      "Infrastructure/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Persistence/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "Infrastructure": "1.0.0",
           "Microsoft.Data.SqlClient": "6.1.2",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.10",
           "Microsoft.Extensions.Configuration.Binder": "9.0.10"
@@ -807,6 +820,11 @@
       "hashPath": "system.text.json.9.0.5.nupkg.sha512"
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -657,6 +657,19 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1685,11 +1698,17 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Domain >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.Data.SqlClient >= 6.1.2",
       "Microsoft.Extensions.Configuration.Abstractions >= 9.0.10",
       "Microsoft.Extensions.Configuration.Binder >= 9.0.10"
@@ -1729,6 +1748,9 @@
           "projectReferences": {
             "E:\\XOKA_Second\\Task_Management_my\\Task_Management\\Src\\Domain\\Domain.csproj": {
               "projectPath": "E:\\XOKA_Second\\Task_Management_my\\Task_Management\\Src\\Domain\\Domain.csproj"
+            },
+            "E:\\XOKA_Second\\Task_Management_my\\Task_Management\\Src\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "E:\\XOKA_Second\\Task_Management_my\\Task_Management\\Src\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

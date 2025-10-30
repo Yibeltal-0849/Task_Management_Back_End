@@ -2,7 +2,9 @@ E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9
 E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Persistence.dll
 E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Persistence.pdb
 E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Domain.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Infrastructure.dll
 E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Domain.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\bin\Debug\net9.0\Infrastructure.pdb
 E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.csproj.AssemblyReference.cache
 E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
 E:\XOKA_Second\Task_Management_my\Task_Management\Src\Persistence\obj\Debug\net9.0\Persistence.AssemblyInfoInputs.cache

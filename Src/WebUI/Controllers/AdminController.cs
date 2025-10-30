@@ -6,7 +6,7 @@ using Persistence.Repositories.admin;
 namespace WebUI.Controllers
 {
     [ApiController]
-    [Route("Api")]
+    [Route("Api/[controller]")]
     public class AdminController : ControllerBase
     {
         private readonly UpdateUserRoleRepository _updateUserRoleRepo;
@@ -14,7 +14,7 @@ namespace WebUI.Controllers
         {
             _updateUserRoleRepo = new UpdateUserRoleRepository(db);
         }
-        [HttpPut("updateRole/{userId}")]
+        [HttpPut("{id}")]
         public IActionResult UpdateUserRole(int userId, [FromBody] string newRole)
         {
             if (string.IsNullOrWhiteSpace(newRole))

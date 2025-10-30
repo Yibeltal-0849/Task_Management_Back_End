@@ -6,7 +6,7 @@ using Task_Management.Domain.Entities;
 namespace Task_Management.Controllers
 {
     [ApiController]
-    [Route("api")]
+    [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly UserRepository _userRepo;
@@ -16,7 +16,7 @@ namespace Task_Management.Controllers
             _userRepo = userRepo;
         }
 
-        [HttpPost("addUser")]
+        [HttpPost]
         public IActionResult AddUser(UserModel user)
         {
             _userRepo.AddUser(user);
@@ -24,15 +24,27 @@ namespace Task_Management.Controllers
         }
 
         // ✅ FIXED GetAllUsers method
-        [HttpGet("getUser")]
+        [HttpGet]
         public ActionResult<IEnumerable<UserModel>> GetAllUsers()
         {
             var users = _userRepo.GetAllUsers(); // ✅ call repository
             return Ok(users); // ✅ return result
         }
 
+[HttpGet("{id}")]
+public IActionResult GetUser(int id)
+{
+    var user = _userRepo.GetUserById(id);
+    if (user == null)
+        return NotFound("User not found.");
+
+    return Ok(user);
+}
+
+
+
  // ✅ Update user
-        [HttpPut("updateUser/{id}")]
+        [HttpPut("{id}")]
         public IActionResult UpdateUser(int id, [FromBody] UserModel updatedUser)
         {
             if (updatedUser == null)
@@ -44,7 +56,7 @@ namespace Task_Management.Controllers
         }
 
         // ✅ Delete user
-        [HttpDelete("deleteUser/{id}")]
+        [HttpDelete("{id}")]
         public IActionResult DeleteUser(int id)
         {
             if (id <= 0)

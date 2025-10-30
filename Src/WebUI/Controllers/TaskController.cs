@@ -36,12 +36,29 @@ namespace Task_Management.Controllers
             return Ok(tasks);
         }
 
+
+[HttpGet("{id}")]
+public IActionResult GetTask(int id)
+{
+    var task = _taskRepo.GetTaskById(id);
+    if (task == null)
+        return NotFound("Task not found.");
+
+    return Ok(task);
+}
+
         [HttpPut("{id}")]
-        public IActionResult UpdateTaskStatus(int id, [FromBody] string status)
-        {
-            _taskRepo.UpdateTaskStatus(id, status);
-            return Ok("Task updated successfully");
-        }
+public IActionResult UpdateTask(int id, [FromBody] TaskModel task)
+{
+    if (task == null || id != task.TaskID)
+    {
+        return BadRequest("Invalid task data.");
+    }
+
+    _taskRepo.UpdateTask(task);
+    return Ok("Task updated successfully.");
+}
+
 
         [HttpDelete("{id}")]
         public IActionResult DeleteTask(int id)

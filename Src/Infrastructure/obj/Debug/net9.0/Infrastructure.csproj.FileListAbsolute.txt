@@ -1,0 +1,16 @@
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\bin\Debug\net9.0\Infrastructure.deps.json
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\bin\Debug\net9.0\Infrastructure.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\bin\Debug\net9.0\Infrastructure.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\bin\Debug\net9.0\Domain.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\bin\Debug\net9.0\Domain.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastructure.csproj.AssemblyReference.cache
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastructure.AssemblyInfoInputs.cache
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastructure.AssemblyInfo.cs
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastructure.csproj.CoreCompileInputs.cache
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastr.15EFFBFE.Up2Date
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastructure.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
+E:\XOKA_Second\Task_Management_my\Task_Management\Src\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll

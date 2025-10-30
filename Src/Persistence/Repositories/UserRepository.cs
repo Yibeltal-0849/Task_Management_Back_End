@@ -4,6 +4,8 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 using Task_Management.Domain.Entities;
 using Task_Management.Persistence.Data;
+using Task_Management.Infrastructure.Security;
+
 
 namespace Task_Management.Persistence.Repositories
 {
@@ -27,7 +29,10 @@ namespace Task_Management.Persistence.Repositories
 
                     cmd.Parameters.AddWithValue("@UserName", user.UserName);
                     cmd.Parameters.AddWithValue("@Email", user.Email);
-                    cmd.Parameters.AddWithValue("@PasswordHash", user.PasswordHash);
+                    // ✅ Hash the password before inserting
+            string hashedPassword = PasswordHelper.HashPassword(user.PasswordHash);
+            cmd.Parameters.AddWithValue("@PasswordHash", hashedPassword);
+                    
                     cmd.Parameters.AddWithValue("@Role", string.IsNullOrEmpty(user.Role) ? (object)DBNull.Value : user.Role);
                     cmd.Parameters.AddWithValue("@Status", string.IsNullOrEmpty(user.Status) ? "Active" : user.Status);
 
@@ -38,38 +43,42 @@ namespace Task_Management.Persistence.Repositories
         }
 
         // ✅ Login user
-        public UserModel ValidateUserLogin(string email, string passwordHash)
+      public UserModel ValidateUserLogin(string email, string password)
+{
+    using (SqlConnection conn = _db.GetConnection())
+    {
+        using (SqlCommand cmd = new SqlCommand("ValidateUserLogin", conn))
         {
-            using (SqlConnection conn = _db.GetConnection())
-            {
-                using (SqlCommand cmd = new SqlCommand("ValidateUserLogin", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@PasswordHash", passwordHash);
+            cmd.CommandType = CommandType.StoredProcedure;
 
-                    conn.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+            string hashedPassword = PasswordHelper.HashPassword(password);
+
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@PasswordHash", hashedPassword);
+
+            conn.Open();
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    return new UserModel
                     {
-                        if (reader.Read())
-                        {
-                            return new UserModel
-                            {
-                                UserID = (int)reader["UserID"],
-                                UserName = reader["UserName"].ToString(),
-                                Email = reader["Email"].ToString(),
-                                Role = reader["Role"].ToString(),
-                                Status = reader["Status"].ToString()
-                            };
-                        }
-                        else
-                        {
-                            return null; // Invalid login
-                        }
-                    }
+                        UserID = (int)reader["UserID"],
+                        UserName = reader["UserName"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        Role = reader["Role"].ToString(),
+                        Status = reader["Status"].ToString()
+                    };
+                }
+                else
+                {
+                    return null; // Invalid email or password
                 }
             }
         }
+    }
+}
+
 
         // ✅ Read all users
         public List<UserModel> GetAllUsers()
@@ -100,6 +109,35 @@ namespace Task_Management.Persistence.Repositories
 
             return users;
         }
+
+        public UserModel GetUserById(int id)
+{
+    using (SqlConnection conn = _db.GetConnection())
+    {
+        using (SqlCommand cmd = new SqlCommand("GetUserById", conn))
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@UserID", id);
+
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return new UserModel
+                {
+                    UserID = (int)reader["UserID"],
+                    UserName = reader["UserName"].ToString(),
+                    Email = reader["Email"].ToString(),
+                    Role = reader["Role"].ToString(),
+                    Status = reader["Status"].ToString()
+                };
+            }
+        }
+    }
+
+    return null; // or throw an exception if preferred
+}
+
 
         // ✅ Update user
         public void UpdateUser(int userId, UserModel updatedUser)
